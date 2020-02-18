@@ -1,0 +1,16 @@
+<div class="input-group" v-for="comment in selected_card.comments">
+    <img style="position:relative; left:-5;" :src="comment.icon_url"
+        height="32px;" width="32px;" class="rounded-circle mr-1"
+        alt="">
+    <!-- name -->
+    <span class="mr-2" style="font-size:0.9rem; font-weight: 900">{{comment.name}}</span>
+    
+    <!-- do something -->
+    <span style="font-size:0.9rem;">{{ comment.text }}</span>
+        
+    <div class="ml-5 w-100" style="position:relative; top:-10px; left:-11px;">
+        <a style="text-decoration: underline; font-size:0.9rem; color: #6b808c;">
+            {{ comment.date }}</a>
+        <hr>
+    </div>
+</div>

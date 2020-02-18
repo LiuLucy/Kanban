@@ -1,0 +1,50 @@
+body{
+    /* background-image: url(https://images.pexels.com/photos/34150/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); */
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#creator_board{
+       
+}
+.creator_body{
+
+}
+.card_board{
+    background-color: black;
+    background-image: url(https://images.pexels.com/photos/220067/pexels-photo-220067.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow:2px 2px 2px 2px rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 100%;
+    height: 15%;
+}
+.card_board:hover{
+    transform: scale(0.9);
+    box-shadow:2px 2px 6px 2px rgba(255, 255, 255, 0.493);
+    cursor: pointer;
+}
+.create-board{
+    position:absolute; 
+    top:6em; 
+    right:0.5em; 
+    opacity: 0.7;
+}
+.modal-content{
+    background-color: rgba(255, 255, 255, 0.493);
+    margin-top: 120px;
+}
+.modal-header{
+    border:none;
+}
+
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 300px;
+        margin: 1.75rem auto;
+    }
+}

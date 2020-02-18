@@ -1,0 +1,71 @@
+<html>
+
+    <head>
+        <%- include ../includes/_head.ejs %>
+        <link rel="stylesheet" href="/public/stylesheet/button_style.css">
+        <link rel="stylesheet" href="./public/stylesheet/login_style.css">
+        
+    </head>
+
+    <body class="align-items-center justify-content-center d-flex">
+        <div id="login" class="flip-card-3D-wrapper">
+            <img class="logo" src="/public/images/logo.png" alt="">
+            <div id="flip-card" class="">
+                <div class="flip-card-front">
+                    <div>
+                        <div class="mt-5">
+                            <h3 class="text-center">Login</h3>
+                        </div>
+                        <div class="my-3 d-flex justify-content-center">
+                            <input class="form-control" id="email" type="email" ref="email" placeholder="email" />
+                        </div>
+                        <div class="my-3 d-flex justify-content-center">
+                            <input class="form-control" id="password" type="password" placeholder="password" />
+                        </div>
+                        <div class="d-flex justify-content-center mt-3 mb-1">
+                            <button id="login-btn" style="cursor: pointer;" class=" button button--sacnite button--round-s button--inverted m-0 my-3">Login</button>                            
+                        </div>
+                        <span class="error-text m-0">{{ loginError }}</span>                        
+                        <div class="mb-3">                        
+                            <span style="font-size:0.8rem;">Don't have an account yet ? </span><a id="flip-card-btn-turn-to-back" style="cursor: pointer;" class="">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <form  @submit="CheckFormRegister" method="POST" novalidate="true">
+                        <div class="mt-5">
+                            <h3 class="text-center">Register</h3>
+                        </div>
+                        <div class="mt-2 d-flex justify-content-center">
+                            <input class="form-control" id="register-name" type="name" placeholder="name" name="name" v-model="name" />
+                        </div>
+                        <span class="error-text">{{ nameError }}</span>                                                
+                        <div class="mt-2 d-flex justify-content-center">
+                            <input class="form-control" id="register-email" type="email" placeholder="email" name="email" v-model="email" />
+                        </div>
+                        <span class="error-text">{{ emailError }}</span>                                                                        
+                        <div class="mt-2 d-flex justify-content-center">
+                            <input class="form-control" id="register-password" type="password" placeholder="password" name="password" v-model="password" />
+                        </div>
+                        <span class="error-text">{{ passwordError }}</span>                                                                        
+                        <div class="mt-2 d-flex justify-content-center">
+                            <input class="form-control" id="register-confirm-password" type="password" placeholder="confirm password" name="confirmPassword" v-model="confirmPassword" />
+                        </div>
+                        <span class="error-text">{{ confirmPasswordError }}</span>                                                                        
+                        <div class="d-flex justify-content-center mt-3">
+                            <!-- <button id="register-btn" v-on:click="checkForm()" class="button button--sacnite button--round-s button--inverted m-0 mt-2">Register</button> -->
+                            <button id="register-btn" type="submit" class="button button--sacnite button--round-s button--inverted m-0 mt-2">Register</button>
+                        </div>                     
+                        <div class="mb-3">
+                            <span style="font-size:0.8rem;">Back to  </span><a id="flip-card-btn-turn-to-front" style="cursor: pointer;" class="">Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <%- include ../includes/_footer.ejs %>
+            <script src="./public/javascript/flip_card.js"></script>
+            <script src="./public/javascript/login.js"></script>
+        </footer>
+    </body>
